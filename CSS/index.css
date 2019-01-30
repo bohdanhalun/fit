@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+* {
+    margin: 0;
+}
+:root{
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    max-width: 980px;
+    margin: 0;
+}
+
+header .logo{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3rem;
+    background-color: #86c232;
+    text-align: center;
+    color: #222629;
+    margin: 0;
+}
+header .menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    background-color: #222629;
+    color: snow;
+    margin: 0;
+    height: 40px;
+}
+header .menu li{
+    list-style-type: none;
+}
+header .menu li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    color: snow;
+    height: 40px;
+}
+header .menu li a:hover{
+    text-decoration: underline; 
+}
+header .big-banner{
+    background-image: url(../IMG/investment2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+header .big-banner h1{
+    font-size: 8rem;
+    text-align: center;
+    margin: 0;
+}
+header .big-banner p{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    margin: 0;
+}
+
+header .big-banner .calltoaction{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+}
+nav .main{
+    background-color: #222629;
+}
+
+nav .main .wht{
+    text-align: center;
+    height: 100%;
+}
+
+nav .tfi{
+    text-align: center;
+    color: snow;
+    font-size: 2rem;
+}
+nav .main .wht h1{
+    background-color: #222629;
+    color:snow;
+    font-size: 2rem;
+    margin: 0px;
+    height: 45px;
+}
+nav .main .wht p{
+    background-color: #86c232;
+    font-size: 20px;
+}
+nav .tools{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    color:snow;
+}
+article .background1{
+    background-image: url(../IMG/wb-about-us.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+article .background1 h1{
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+}
+article .background1 p{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+footer .mainfooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222629;
+    color: snow;
+}
+
+footer .mainfooter .footer2 ul{
+    text-align: center;
+    font-size: 2rem;
+}
+footer .mainfooter .footer2 li{
+    list-style:none;
+    font-size: 1rem;
+}
+.footer3 {
+    background-color: #86c232;
+    text-align: center;
+    font-size: 1.3rem;
+    height: 30px;
+}
+footer div .foooter3 p{
+    margin: 0;
+}
+
