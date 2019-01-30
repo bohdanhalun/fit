@@ -18,6 +18,7 @@ header .logo{
     text-align: center;
     color: #222629;
     margin: 0;
+    font-weight: bold;
 }
 header .menu{
     display: flex;
@@ -52,9 +53,10 @@ header .big-banner{
     justify-content:center;
 }
 header .big-banner h1{
-    font-size: 8rem;
+    font-size: 10rem;
     text-align: center;
     margin: 0;
+    font-weight: bold;
 }
 header .big-banner p{
     display: flex;
@@ -67,6 +69,7 @@ header .big-banner .calltoaction{
     display: flex;
     justify-content: flex-end;
     align-items:center;
+    margin-bottom: 30px;
 }
 nav .main{
     background-color: #222629;
@@ -110,13 +113,14 @@ article .background1{
 }
 article .background1 h3{
     text-align: center;
-    color: black;
+    color: #222629;
     font-size: 2rem;
 }
 article .background1 p{
     text-align: center;
-    color: black;
+    color: #222629;
     font-size: 20px;
+    font-weight: bold;
 }
 footer .mainfooter{
     display: grid;
