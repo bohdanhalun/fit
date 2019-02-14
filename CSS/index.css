@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans");
 html {
   margin: 0;
+  scroll-behavior: smooth;
 }
 :root {
   font-family: "Work Sans", sans-serif;
@@ -24,7 +25,6 @@ header .menu {
   justify-content: space-around;
   align-items: center;
   padding: 0;
-  background-color: #222629;
   color: snow;
   margin: 0;
   height: 40px;
@@ -39,6 +39,13 @@ header .menu {
 }
 header .menu li {
   list-style-type: none;
+  background: #222629;
+  padding: 6px;
+  width: 25%;
+  text-align: center;
+}
+header .menu li:nth-child(even){
+  background: #474b4f;
 }
 header .menu li a {
   text-transform: uppercase;
@@ -58,11 +65,13 @@ header .big-banner {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 header .big-banner h1 {
   font-size: 10rem;
   text-align: center;
   margin: 0;
+  border-bottom: 10px solid black;
   font-weight: bold;
 }
 header .big-banner p {
@@ -70,24 +79,44 @@ header .big-banner p {
   justify-content: flex-start;
   font-size: 2rem;
   margin: 0;
+  margin-top: 10px;
 }
 
 header .big-banner .calltoaction {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
   margin-bottom: 30px;
+  width: 95%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin-top: 40px;
 }
-nav .main {
+.calltoaction form{
+  display: flex;
+  justify-content: space-evenly;
+}
+.calltoaction input{
+  border-radius: 5px;
+  padding: 7px 30px;
+  font-size: 1rem;
+}
+.form-but{
+    padding: 6px 50px;
+    border: 1px black;
+    border-radius: 5px;
+    background: #86c232;
+    font-size: 1rem;
+    font-weight: bold;
+    color:snow;
+}
+.main {
   background-color: #222629;
 }
 
-nav .main .wht {
+.main .wht {
   text-align: center;
   height: 100%;
 }
-
-nav .tfi {
+ .tfi {
   text-align: center;
   color: snow;
   font-size: 2rem;
@@ -97,19 +126,21 @@ nav .tfi {
   color: snow;
   font-size: 2rem;
   margin: 0px;
-  height: 45px;
+  padding-top: 25px;
 }
-nav .main .wht p {
+.main .wht p {
   background-color: #86c232;
-  font-size: 20px;
+  font-size: 22px;
+  padding:25px 5px 30px 5px;
+  color:#222629;
 }
-nav .tools {
+.tools {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, auto);
   text-align: center;
   color: snow;
 }
-article .background1 {
+.background1 {
   background-image: url(../IMG/wb-about-us.jpg);
   background-position: center;
   background-size: cover;
@@ -117,23 +148,32 @@ article .background1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
-article .background1 h3 {
+.background1 h3 {
   text-align: center;
   color: #222629;
   font-size: 2rem;
 }
-article .background1 p {
-  text-align: center;
+.background1 p {
   color: #222629;
-  font-size: 20px;
-  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px 5px 20px 5px;
+  background: rgba( 256, 256 , 256, 0.3);
 }
 footer .mainfooter {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #222629;
   color: snow;
+}
+.footer1{
+  text-align: center;
+}
+#con{
+  font-size: 2rem;
+  text-align: center;
 }
 
 footer .mainfooter .footer2 ul {
@@ -148,10 +188,34 @@ footer .mainfooter .footer2 li {
   background-color: #86c232;
   text-align: center;
   font-size: 1.3rem;
-  height: 30px;
+  margin: 0; 
 }
-footer div .foooter3 p {
-  margin: 0;
+footer .footer3 p {
+  margin: 0 !important;
+  padding: 15px;
+}
+.textarea{
+  display: block;
+  margin: 0 auto;
+  padding: 0 20;
+  text-align: center;
+}
+.form-but-bot{
+  background: snow;
+  display: block;
+  margin: 0 auto;
+  height: 25px;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+.footermargin{
+  margin: 6px;
+  fon
+}
+@media (max-width: 800px){
+  .tools {
+    grid-template-columns: repeat(2,auto);
+  }
 }
 
 /* media queries for mobile  */
@@ -173,8 +237,19 @@ footer div .foooter3 p {
     opacity: 0;
     transition: opacity 1s;
   }
+  header .menu li {
+    width: 50%;
+  }
   header .menu.open {
     opacity: 1;
+    z-index: 10;
+    position: relative;
+  }
+  .menu.open li{
+    margin: 5px;
+  }
+  header .menu li a {
+    color:#86c232;
   }
   .flex {
     justify-content: space-around;
@@ -190,9 +265,22 @@ footer div .foooter3 p {
     color: #86c232;
   }
   header .big-banner {
-    min-height: 100px;
-    margin-bottom: 100px;
-    background: rgba(0 ,0, 0, 0.2);
+    min-height: 350px;
+    margin-top:-160px;
+    
+  }
+  .mobile-width{
+    width: 100%;
+  }
+  header .big-banner h1 {
+    border-bottom: none;
+  }
+  .mobile-width h1{
+    width: 100%;
+    background:rgba(0, 0, 0, 0.3);
+  }
+  header .menu.open .big-banner {
+    margin-top: 0;
   }
   header .big-banner .calltoaction {
     display: none;
@@ -206,22 +294,39 @@ footer div .foooter3 p {
   .wht h2 {
     text-align: center;
     font-weight: normal;
+    color: #86c232;
   }
   .wht p, .background1 p {
     color: white;
     text-align: center;
-    padding: 10px 20px 30px 20px ;
+    padding: 20px 20px 30px 20px ;
+  }
+  .color-gb{
+    background:#474b4f;
+  }
+  .tools{
+    text-align: center;
+    color:#86c232;
+    grid-template-columns: repeat(1, auto);
   }
   .tfi h1, #tea {
     text-align: center;
     font-size: 2rem;
+    color: #86c232;
   }
   .box1 h3, .box2 h3, .box3 h3, .box4 h3 {
     font-size: 1.5rem;
     text-align: center;
   }
+  .background1{
+    background: #86c232;
+    color:#222629;
+  }
+  .background1 #tea{
+    color: #222629;
+  }
   .background1 p {
-    color: black;
+    color: #222629;
   }
   .footer2 ul {
     padding: 0;
